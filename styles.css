@@ -1,36 +1,115 @@
+* {
+    font-size: 24px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
 body {
-    background-color: maroon;
-    color: white;
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    border: solid 5px white;
-    padding-left: 1%;
-    padding-right: 1%;
-    border-radius: 25px;
+    background-color: gray;
+    padding: 0;
+    margin: 0;
 }
 
-h1 {
-    text-align: center;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: repeat(6, 1fr);
+    grid-gap: none;
+
 }
 
-ul {
-    
+header {
+    background-color: lightgrey;
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 }
 
-nav li {
-    display: inline-block;
-    
+nav {
+    background-color: gray;
+    grid-column: 1 / 4;
+    grid-row: 1 / 1;
+
 }
 
-nav li a {
-    display: block;
-    padding: 7px;
-    margin: 7px;
+main {
     background-color: white;
-    color: olive;
-    text-decoration: none;
-    border-radius: 7px;
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+
 }
 
- {}
+footer {
+    background: lightblue;
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li  {
+    background-color: red;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    background-color: limegreen;
+    padding: 15px;
+    text-decoration: none;
+}
+
+a:hover {
+    display: block;
+    background-color: gray;
+    color: white;
+
+}
+
+nav h1 {
+    align-self: flex-start;
+
+}
+
+.autor {
+    border-radius: 50%;
+    width: 150px;
+    mix-blend-mode: multiply;
+}
+
+.kamarad {
+    border-radius: 50%;
+    width: 300px;
+    margin: 50px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+}
+
+.fikus {
+    border-radius: 50%;
+    height: 50px;
+
+}
